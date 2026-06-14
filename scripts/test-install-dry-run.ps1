@@ -2,11 +2,12 @@ $ErrorActionPreference = "Stop"
 $Root = Resolve-Path (Join-Path $PSScriptRoot "..")
 $TempBase = [System.IO.Path]::GetFullPath([System.IO.Path]::GetTempPath())
 $TempRoot = Join-Path $TempBase ("codex-skill-forge-install-test-" + [Guid]::NewGuid().ToString("N"))
+$PowerShellRunner = if (Get-Command powershell.exe -ErrorAction SilentlyContinue) { "powershell.exe" } else { "pwsh" }
 
 function Invoke-Install {
   param([string[]]$Arguments)
   $global:LASTEXITCODE = 0
-  $output = & powershell.exe -NoProfile -ExecutionPolicy Bypass -File (Join-Path $Root "scripts/install.ps1") @Arguments
+  $output = & $PowerShellRunner -NoProfile -ExecutionPolicy Bypass -File (Join-Path $Root "scripts/install.ps1") @Arguments
   if ($LASTEXITCODE -ne 0) {
     throw "install.ps1 failed with exit code $LASTEXITCODE. Output: $($output -join "`n")"
   }
@@ -33,7 +34,7 @@ try {
   $previousPreference = $ErrorActionPreference
   $ErrorActionPreference = "Continue"
   try {
-    $repeatOutput = & powershell.exe -NoProfile -ExecutionPolicy Bypass -File (Join-Path $Root "scripts/install.ps1") -DestinationRoot $TempRoot -AllowCustomDestination -Yes 2>&1
+    $repeatOutput = & $PowerShellRunner -NoProfile -ExecutionPolicy Bypass -File (Join-Path $Root "scripts/install.ps1") -DestinationRoot $TempRoot -AllowCustomDestination -Yes 2>&1
     $repeatExit = $LASTEXITCODE
   }
   finally {

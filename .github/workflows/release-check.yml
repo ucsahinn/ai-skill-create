@@ -22,7 +22,7 @@ jobs:
         with:
           node-version: "22"
       - name: Validate release files
-        run: npm run validate
+        run: powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/validate-all.ps1 -SkipSecrets
   history-secret-scan:
     runs-on: ubuntu-latest
     permissions:
