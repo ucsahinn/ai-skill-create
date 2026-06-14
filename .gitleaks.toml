@@ -1,0 +1,9 @@
+title = "codex-skill-forge gitleaks policy"
+
+[allowlist]
+description = "Allow inert documentation placeholders only."
+regexes = [
+  '''YOUR_[A-Z0-9_]+_HERE''',
+  '''replace_me''',
+  '''example\.invalid'''
+]

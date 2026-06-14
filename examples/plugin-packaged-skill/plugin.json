@@ -1,0 +1,21 @@
+{
+  "name": "release-notes-helper",
+  "version": "0.1.0",
+  "description": "Example plugin wrapper for a release notes skill.",
+  "author": {
+    "name": "Example Author",
+    "url": "https://example.invalid"
+  },
+  "repository": "https://example.invalid/release-notes-helper",
+  "license": "MIT",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Release Notes Helper",
+    "shortDescription": "Draft release notes.",
+    "developerName": "Example Author",
+    "category": "Developer Tools",
+    "defaultPrompt": [
+      "Use $release-notes-helper to draft release notes."
+    ]
+  }
+}

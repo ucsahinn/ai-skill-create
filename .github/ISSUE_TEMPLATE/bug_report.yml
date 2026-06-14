@@ -1,0 +1,49 @@
+name: Bug report
+description: Report a reproducible issue with Codex Skill Forge.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: Codex Skill Forge version or commit.
+      placeholder: "0.1.0"
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating system
+      options:
+        - Windows
+        - macOS
+        - Linux
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: shell
+    attributes:
+      label: Shell
+      placeholder: "Windows PowerShell 5.1, PowerShell 7, bash"
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Include sanitized commands and output only.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true

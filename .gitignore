@@ -1,0 +1,53 @@
+# Dependencies and build output
+node_modules/
+dist/
+build/
+coverage/
+.nyc_output/
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.cer
+*.kdbx
+*.sqlite
+*.db
+*.dump
+
+# Logs, reports, screenshots, and generated archives
+*.log
+logs/
+reports/
+playwright-report/
+test-results/
+screenshots/
+*.zip
+*.tar
+*.tar.gz
+*.7z
+*.msi
+*.exe
+*.dmg
+
+# Local AI agent state
+.codex/
+.claude/
+.cursor/
+.continue/
+.agents/state/
+.agents/sessions/
+*.heapsnapshot
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.swp

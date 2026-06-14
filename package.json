@@ -1,0 +1,36 @@
+{
+  "name": "codex-skill-forge",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Public Codex skill and plugin toolkit for creating, validating, and packaging high-quality Codex skills.",
+  "license": "MIT",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ucsahinn/codex-skill-forge.git"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "check": "npm run validate",
+    "validate": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/validate-all.ps1",
+    "validate:structure": "node scripts/validate-structure.mjs",
+    "validate:skill": "node scripts/validate-skill-frontmatter.mjs plugins/codex-skill-forge/skills/codex-skill-forge/SKILL.md",
+    "validate:openai-yaml": "node scripts/validate-openai-yaml.mjs plugins/codex-skill-forge/skills/codex-skill-forge/agents/openai.yaml",
+    "validate:plugin": "node scripts/validate-plugin-json.mjs plugins/codex-skill-forge/.codex-plugin/plugin.json",
+    "validate:marketplace": "node scripts/validate-marketplace.mjs .agents/plugins/marketplace.json",
+    "validate:links": "node scripts/validate-markdown-links.mjs",
+    "validate:syntax": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/check-script-syntax.ps1",
+    "validate:install": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-install-dry-run.ps1",
+    "validate:secrets": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/security-scan.ps1"
+  },
+  "keywords": [
+    "codex",
+    "skills",
+    "plugins",
+    "prompt-engineering",
+    "agents",
+    "validation"
+  ]
+}

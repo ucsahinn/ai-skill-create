@@ -1,0 +1,21 @@
+{
+  "name": "example-plugin",
+  "version": "0.1.0",
+  "description": "Example Codex plugin package.",
+  "author": {
+    "name": "Example Author",
+    "url": "https://example.invalid"
+  },
+  "repository": "https://example.invalid/example-plugin",
+  "license": "MIT",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Example Plugin",
+    "shortDescription": "Example plugin package.",
+    "developerName": "Example Author",
+    "category": "Developer Tools",
+    "defaultPrompt": [
+      "Use $example-skill-name to complete this task."
+    ]
+  }
+}

@@ -1,0 +1,53 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Validate (${{ matrix.os }}, Node ${{ matrix.node }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+          - windows-latest
+          - ubuntu-latest
+        node:
+          - "18"
+          - "22"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+        with:
+          persist-credentials: false
+      - name: Setup Node
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: ${{ matrix.node }}
+      - name: Structure and metadata
+        run: |
+          node scripts/validate-structure.mjs
+          node scripts/validate-skill-frontmatter.mjs plugins/codex-skill-forge/skills/codex-skill-forge/SKILL.md
+          node scripts/validate-openai-yaml.mjs plugins/codex-skill-forge/skills/codex-skill-forge/agents/openai.yaml
+          node scripts/validate-plugin-json.mjs plugins/codex-skill-forge/.codex-plugin/plugin.json
+          node scripts/validate-marketplace.mjs .agents/plugins/marketplace.json
+          node scripts/validate-markdown-links.mjs
+      - name: Script syntax
+        shell: pwsh
+        run: ./scripts/check-script-syntax.ps1
+      - name: Install dry run
+        shell: pwsh
+        run: ./scripts/test-install-dry-run.ps1
+      - name: Shell install smoke
+        if: runner.os == 'Linux'
+        shell: bash
+        run: |
+          sh scripts/install.sh --destination-root "$RUNNER_TEMP/codex-skill-forge-install" --allow-custom-destination --yes
+          test -f "$RUNNER_TEMP/codex-skill-forge-install/skills/codex-skill-forge/SKILL.md"

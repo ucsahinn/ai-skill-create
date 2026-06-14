@@ -1,0 +1,25 @@
+name: Feature request
+description: Suggest an improvement for Codex Skill Forge.
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What skill creation problem should this solve?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      description: Describe the requested workflow, script, validator, doc, or packaging improvement.
+    validations:
+      required: true
+  - type: textarea
+    id: examples
+    attributes:
+      label: Example prompts or files
+      description: Use sanitized examples only.
