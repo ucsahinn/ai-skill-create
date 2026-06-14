@@ -1,5 +1,14 @@
 # 🛠️ Codex Skill Forge
 
+<p align="center">
+  <a href="README.de.md">🇩🇪 Deutsch</a> ·
+  <a href="README.es.md">🇪🇸 Español</a> ·
+  <a href="README.md">🇬🇧 English</a> ·
+  <a href="README.pt-BR.md">🇧🇷 Português (Brasil)</a> ·
+  <a href="README.tr.md">🇹🇷 Türkçe</a> ·
+  <a href="README.fr.md">🇫🇷 French</a>
+</p>
+
 **Codex Skill Forge**, gerçek brief, örnek, dosya ve talimatlardan daha iyi Codex skill’leri üretmek için hazırlanmış public-ready bir Codex skill ve plugin paketidir.
 
 Amaç basit: Codex bir skill oluştururken sadece şablon doldurmasın; skill’i anlasın, doğru yapıyı seçsin, doğrulasın, forward-test etsin, güvenli paketlesin ve başkalarının rahatça kurabileceği hale getirsin.
