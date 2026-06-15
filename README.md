@@ -1,16 +1,33 @@
 # 🛠️ Codex Skill Forge
 
 <p align="center">
+  <a href="https://github.com/ucsahinn/codex-skill-forge/actions/workflows/ci.yml">
+    <img src="https://img.shields.io/github/actions/workflow/status/ucsahinn/codex-skill-forge/ci.yml?branch=main&amp;style=for-the-badge&amp;label=CI&amp;logo=githubactions&amp;logoColor=white" alt="Codex Skill Forge CI status" />
+  </a>
+  <a href="https://github.com/ucsahinn/codex-skill-forge/actions/workflows/secret-scan.yml">
+    <img src="https://img.shields.io/github/actions/workflow/status/ucsahinn/codex-skill-forge/secret-scan.yml?branch=main&amp;style=for-the-badge&amp;label=Secret%20Scan&amp;logo=gitguardian&amp;logoColor=white" alt="Codex Skill Forge secret scan status" />
+  </a>
+  <a href="https://github.com/ucsahinn/codex-skill-forge/stargazers">
+    <img src="https://img.shields.io/github/stars/ucsahinn/codex-skill-forge?style=for-the-badge&amp;logo=github&amp;label=Stars&amp;color=f59e0b" alt="Codex Skill Forge GitHub stars" />
+  </a>
+  <a href="https://github.com/ucsahinn/codex-skill-forge/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/ucsahinn/codex-skill-forge?style=for-the-badge&amp;color=111827" alt="Codex Skill Forge license" />
+  </a>
+</p>
+
+<p align="center">
   🌐 <strong>Languages:</strong>
   <a href="README.de.md">🇩🇪 Deutsch</a> ·
   <a href="README.es.md">🇪🇸 Español</a> ·
   <a href="README.md">🇬🇧 English</a> ·
   <a href="README.pt-BR.md">🇧🇷 Português (Brasil)</a> ·
   <a href="README.tr.md">🇹🇷 Türkçe</a> ·
-  <a href="README.fr.md">🇫🇷 French</a>
+  <a href="README.fr.md">🇫🇷 Français</a>
 </p>
 
 **Codex Skill Forge** is a public-ready Codex skill and plugin package for creating better Codex skills from real briefs, examples, files, and constraints.
+
+> ⭐ Build the skill, validate the structure, dry-run the install path, then package it for other Codex users.
 
 It helps Codex design, scaffold, validate, forward-test, document, and package skills that are triggerable, concise, safe, progressive-disclosure friendly, and easy to install.
 
