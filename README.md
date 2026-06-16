@@ -32,6 +32,23 @@
   <a href="README.fr.md"><img src="https://flagcdn.com/w20/fr.png" alt="Fran&#231;ais" width="20"></a>
 </p>
 
+<!-- bilingual-welcome:start -->
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <h3><img src="https://flagcdn.com/w20/gb.png" alt="English" width="20"> English welcome</h3>
+      <p>AI Skill Create helps design, scaffold, validate, forward-test, document, and package Codex skills and plugins from real briefs and examples.</p>
+      <p><strong>Start here:</strong> [Install dry run](docs/INSTALL.md) and validation docs show the safe path.</p>
+    </td>
+    <td width="50%" valign="top">
+      <h3><img src="https://flagcdn.com/w20/tr.png" alt="Turkce" width="20"> T&#252;rk&#231;e kar&#351;&#305;lama</h3>
+      <p>AI Skill Create, gercek brief ve orneklerden Codex skill/plugin tasarlamak, olusturmak, dogrulamak, forward-test etmek ve paketlemek icin hazirlandi.</p>
+      <p><strong>Buradan ba&#351;la:</strong> [README.tr.md](README.tr.md) Turkce anlatimla ayni akisi verir.</p>
+    </td>
+  </tr>
+</table>
+<!-- bilingual-welcome:end -->
+
 **AI Skill Create** is a public-ready Codex skill and plugin package for creating better Codex skills from real briefs, examples, files, and constraints.
 
 > <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/2b50.svg" alt="" aria-hidden="true" width="20"> Build the skill, validate the structure, dry-run the install path, then package it for other Codex users.
