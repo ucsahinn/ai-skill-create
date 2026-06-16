@@ -38,12 +38,12 @@
     <td width="50%" valign="top">
       <h3><img src="https://flagcdn.com/w20/gb.png" alt="English" width="20"> English welcome</h3>
       <p>AI Skill Create helps design, scaffold, validate, forward-test, document, and package Codex skills and plugins from real briefs and examples.</p>
-      <p><strong>Start here:</strong> [Install dry run](docs/INSTALL.md) and validation docs show the safe path.</p>
+      <p><strong>Start here:</strong> <a href="docs/INSTALL.md">Install dry run</a> and validation docs show the safe path.</p>
     </td>
     <td width="50%" valign="top">
-      <h3><img src="https://flagcdn.com/w20/tr.png" alt="Turkce" width="20"> T&#252;rk&#231;e kar&#351;&#305;lama</h3>
-      <p>AI Skill Create, gercek brief ve orneklerden Codex skill/plugin tasarlamak, olusturmak, dogrulamak, forward-test etmek ve paketlemek icin hazirlandi.</p>
-      <p><strong>Buradan ba&#351;la:</strong> [README.tr.md](README.tr.md) Turkce anlatimla ayni akisi verir.</p>
+      <h3><img src="https://flagcdn.com/w20/tr.png" alt="Türkçe" width="20"> Türkçe karşılama</h3>
+      <p>Codex skill'i yazarken sadece klasör açıp şablon doldurmak yerine brief'i anlayan, yapıyı kuran, doğrulayan ve paketlemeye hazır hale getiren yardımcı repo. Skill ve plugin üretimini daha düzenli yapar.</p>
+      <p><strong>Buradan başla:</strong> Türkçe özet <a href="README.tr.md">README.tr.md</a>; kurulum ve dry-run akışı için <a href="docs/INSTALL.md">INSTALL</a>.</p>
     </td>
   </tr>
 </table>
